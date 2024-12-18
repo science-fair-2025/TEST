@@ -15,8 +15,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--bg-color-dark);
-            color: var(--text-color-dark);
+            background: var(--bg-color);
+            color: var(--text-color);
             transition: background 0.3s, color 0.3s;
         }
         header {
@@ -89,15 +89,10 @@
     <script>
         function toggleTheme() {
             const root = document.documentElement;
-            const currentBg = getComputedStyle(root).getPropertyValue('--bg-color-dark');
+            const isDarkMode = root.style.getPropertyValue('--bg-color') === 'var(--bg-color-dark)';
 
-            if (root.style.getPropertyValue('--bg-color') === currentBg.trim()) {
-                root.style.setProperty('--bg-color', 'var(--bg-color-light)');
-                root.style.setProperty('--text-color', 'var(--text-color-light)');
-            } else {
-                root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
-                root.style.setProperty('--text-color', 'var(--text-color-dark)');
-            }
+            root.style.setProperty('--bg-color', isDarkMode ? 'var(--bg-color-light)' : 'var(--bg-color-dark)');
+            root.style.setProperty('--text-color', isDarkMode ? 'var(--text-color-light)' : 'var(--text-color-dark)');
         }
 
         document.addEventListener("DOMContentLoaded", () => {
