@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI: The Future of World Domination</title>
     <style>
+        :root {
+            --bg-color-dark: linear-gradient(to bottom, navy, black);
+            --text-color-dark: white;
+            --bg-color-light: linear-gradient(to bottom, lightblue, white);
+            --text-color-light: black;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, navy, black);
-            color: white;
+            background: var(--bg-color-dark);
+            color: var(--text-color-dark);
+            transition: background 0.3s, color 0.3s;
         }
         header {
             background-color: rgba(0, 0, 50, 0.9);
@@ -63,7 +70,42 @@
             color: white;
             margin-top: 2rem;
         }
+        .theme-toggle {
+            margin: 1rem auto;
+            display: block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: white;
+            background-color: gray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .theme-toggle:hover {
+            background-color: darkgray;
+        }
     </style>
+    <script>
+        function toggleTheme() {
+            const root = document.documentElement;
+            const currentBg = getComputedStyle(root).getPropertyValue('--bg-color-dark');
+
+            if (root.style.getPropertyValue('--bg-color') === currentBg.trim()) {
+                root.style.setProperty('--bg-color', 'var(--bg-color-light)');
+                root.style.setProperty('--text-color', 'var(--text-color-light)');
+            } else {
+                root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
+                root.style.setProperty('--text-color', 'var(--text-color-dark)');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
+            root.style.setProperty('--text-color', 'var(--text-color-dark)');
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -75,6 +117,7 @@
         <a href="#cons">Cons</a>
         <a href="#future">The Future</a>
     </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
     <div class="container">
         <section id="introduction">
             <h2>Introduction</h2>
