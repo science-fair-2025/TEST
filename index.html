@@ -3,140 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI: The Future of World Domination</title>
+    <title>The Future with AI</title>
     <style>
-        :root {
-            --bg-color-dark: linear-gradient(to bottom, navy, black);
-            --text-color-dark: white;
-            --bg-color-light: linear-gradient(to bottom, lightblue, white);
-            --text-color-light: black;
-        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
             margin: 0;
             padding: 0;
-            background: var(--bg-color);
-            color: var(--text-color);
-            transition: background 0.3s, color 0.3s;
         }
         header {
-            background-color: rgba(0, 0, 50, 0.9);
+            background-color: #007bff; /* Blue header */
             color: white;
-            padding: 1rem;
             text-align: center;
+            padding: 1em 0;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: rgba(0, 0, 70, 0.9);
-            padding: 0.5rem 0;
+        section {
+            padding: 20px;
         }
-        nav a {
+        button {
+            background-color: #007bff; /* Blue button */
             color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-        }
-        .button {
-            display: inline-block;
-            margin: 1rem 0.5rem;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            color: navy;
-            background-color: white;
+            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
-        }
-        .button:hover {
-            background-color: lightgray;
+            margin: 5px; /* Add some space between buttons */
         }
         footer {
-            text-align: center;
-            padding: 1rem;
-            background: rgba(0, 0, 50, 0.9);
+            background-color: #333; /* Dark gray footer */
             color: white;
-            margin-top: 2rem;
-        }
-        .theme-toggle {
-            margin: 1rem auto;
-            display: block;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            color: white;
-            background-color: gray;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
             text-align: center;
-        }
-        .theme-toggle:hover {
-            background-color: darkgray;
+            padding: 1em 0;
+            position: fixed; /* Fixed to the bottom */
+            bottom: 0;
+            width: 100%;
         }
     </style>
-    <script>
-        function toggleTheme() {
-            const root = document.documentElement;
-            const isDarkMode = root.style.getPropertyValue('--bg-color') === 'var(--bg-color-dark)';
-
-            root.style.setProperty('--bg-color', isDarkMode ? 'var(--bg-color-light)' : 'var(--bg-color-dark)');
-            root.style.setProperty('--text-color', isDarkMode ? 'var(--text-color-light)' : 'var(--text-color-dark)');
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const root = document.documentElement;
-            root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
-            root.style.setProperty('--text-color', 'var(--text-color-dark)');
-        });
-    </script>
 </head>
 <body>
+
     <header>
-        <h1>AI: The Future of World Domination</h1>
+        <h1>The Future with AI</h1>
+        <p>Exploring the Potential Impacts of Artificial Intelligence</p>
     </header>
-    <nav>
-        <a href="#introduction">Introduction</a>
-        <a href="#pros">Pros</a>
-        <a href="#cons">Cons</a>
-        <a href="#future">The Future</a>
-    </nav>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
-    <div class="container">
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Artificial Intelligence (AI) has rapidly transformed the way we live, work, and interact with the world. From automating tasks to enabling self-driving cars, AI is paving the way for an unprecedented future. But how far will AI go?</p>
-            <button class="button" onclick="alert('AI is learning about you as you read this!')">Learn More</button>
-        </section>
-        <section id="pros">
-            <h2>The Pros of AI</h2>
-            <p>AI has the potential to revolutionize industries, improve healthcare, and solve global challenges. Imagine a world where diseases are eradicated and productivity is maximized.</p>
-            <button class="button" onclick="alert('AI could save lives, reduce costs, and enhance efficiency.')">See Benefits</button>
-        </section>
-        <section id="cons">
-            <h2>The Cons of AI</h2>
-            <p>With great power comes great responsibility. AI also poses risks such as job displacement, ethical dilemmas, and even the potential for misuse in warfare or surveillance.</p>
-            <button class="button" onclick="alert('AI could be the ultimate disruptor, for better or worse.')">See Risks</button>
-        </section>
-        <section id="future">
-            <h2>The Future of AI</h2>
-            <p>Will AI become humanity's greatest ally or its biggest threat? Only time will tell. One thing is certain: AI is here to stay, and its role in shaping the future is inevitable.</p>
-            <button class="button" onclick="alert('The future is closer than you think.')">Explore the Future</button>
-        </section>
-    </div>
+
+    <section>
+        <h2>Economic Impact</h2>
+        <p>AI is poised to revolutionize industries, automating tasks and potentially leading to significant shifts in the job market.  The long-term effects are a subject of ongoing debate.</p>
+        <button onclick="alert('Economic Impact details coming soon!')">Learn More</button>
+        <button onclick="alert('Job Market predictions coming soon!')">Job Market</button>
+
+    </section>
+
+    <section>
+        <h2>Social Impact</h2>
+        <p>From personalized medicine to social interactions, AI could profoundly change how we live and interact with each other.  Ethical considerations are crucial.</p>
+        <button onclick="alert('Social Impact details coming soon!')">Explore Ethics</button>
+        <button onclick="alert('Healthcare applications coming soon!')">Healthcare</button>
+    </section>
+
+    <section>
+        <h2>Technological Advancements</h2>
+        <p>AI's rapid development promises breakthroughs in fields like robotics, natural language processing, and computer vision, pushing the boundaries of what's possible.</p>
+        <button onclick="alert('Robotics advancements coming soon!')">Robotics</button>
+        <button onclick="alert('NLP breakthroughs coming soon!')">Natural Language</button>
+    </section>
+
     <footer>
-        <p>Website created by ChatGPT with credit to Malik & Holden.</p>
+        <p>Created by Gemini.  Credit to Malik & Holden.</p>
     </footer>
+
 </body>
 </html>
